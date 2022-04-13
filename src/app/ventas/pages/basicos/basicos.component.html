@@ -1,0 +1,59 @@
+<div class="text-layout">
+    <h1>Pipes Basicos</h1>
+    <p>
+        Pipes incluidos en el Angular - Usualmente en el Common Module
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="uppercase"
+                [subheader]="nombreLower | uppercase">
+            {{nombreLower | uppercase}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        
+            <p-card header="Lowercase"
+                [subheader]="nombreLower">
+            {{nombreUpper | lowercase}}
+        </p-card>
+     
+    </div>
+    <div class="col-4">
+        <p-card header="Title Case"
+        [subheader]="nombreCompleto | titlecase">
+    {{nombreCompleto }}
+</p-card>
+    </div>  
+</div>
+
+<div class="text-layout">
+    <h1>DATE | FECHA | Pipe</h1>
+    <p>
+        Pipes para mostrar las fechas
+    </p>
+</div>
+<div class="grid">
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>fecha</li>
+                <li>fecha | date</li>
+                <li>fecha | date:'short'</li>
+                <li>fecha | date:'h:mm:ss EEEE, MMMM d, y'</li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>{{fecha}}</li>
+                <li>{{fecha | date}}</li>
+                <li>{{fecha | date:'short'}}</li>
+                <li>{{fecha | date:'h:mm:ss, EEEE -  MMMM d, y'}}</li> 
+                <!-- para los numeros se separa con : y para las letras se separa con , -->
+            </ul>
+        </p-card>
+    </div>
+</div>
